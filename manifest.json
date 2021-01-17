@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Lambda Shortcut",
+  "version": "1.0",
+  "content_scripts": [
+      {
+        "matches": ["https://console.aws.amazon.com/*"],
+        "js": ["script.js"],
+        "include_globs": ["*.amazon.com/cloudwatch/*/log-group/$252Faws$252Flambda$252F*"]
+      }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions":[
+    "*://console.aws.amazon.com/*","webNavigation"
+  ],
+  "icons": {
+    "48": "icon-48.png",
+   "128": "icon-128.png" }
+}
