@@ -1,7 +1,7 @@
 if (document.getElementById('openFunctionExtension')){
     document.getElementById('openFunctionExtension').remove()
 }
-if (window.location.href.indexOf('https://console.aws.amazon.com/cloudwatch/home') !== -1 && window.location.href.indexOf('log-groups/log-group/$252Faws$252Flambda$252F') !== -1){
+if (window.location.href.indexOf('console.aws.amazon.com/cloudwatch/home') !== -1 && window.location.href.indexOf('log-groups/log-group/$252Faws$252Flambda$252F') !== -1){
     //in lambda logs
     let link = document.createElement("a");
     link.innerHTML = "Open Function"
